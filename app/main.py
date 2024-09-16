@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from db import books
+from .db import books
 
 app = FastAPI()
 
