@@ -15,3 +15,8 @@ async def get_book(id: int):
         if book["id"] == id:
             return book
     raise HTTPException(status_code=404, detail="Book not found")
+
+
+@app.post("/books/")
+async def create_book():
+    return {"message": "Book added"}
