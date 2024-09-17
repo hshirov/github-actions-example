@@ -1,6 +1,5 @@
 from fastapi import FastAPI, HTTPException
 from .db import books
-from collections import defaultdict
 
 app = FastAPI()
 
@@ -12,6 +11,8 @@ async def get_books(offset: int = 0, limit: int = 10):
 
 @app.get("/books/{id}")
 async def get_book(id: int):
+    raise HTTPException(status_code=404, detail="Book not found")
+
     for book in books:
         if book["id"] == id:
             return book
