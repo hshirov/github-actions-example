@@ -10,7 +10,7 @@ books: list[dict[str | float | bool]] = [
         "id": 2,
         "title": "Dune Messiah",
         "author": "Frank Herbert",
-        "price": 15.99,
+        "price": 12.99,
         "available": False,
     },
     {
